@@ -15,20 +15,30 @@ import { ChangeAlert } from '../ChangeAlert/index';
 
  function App() {
   const {
+    states, 
+    stateUpdaters
+  } = useTodos();
+
+  const {
     error,
     loading,
     searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
     totalTodos,
     completedTodos,
+    openModal,
     searchValue,
-    setSearchValue,
+  } = states;
+
+  const {
+    setOpenModal,
     addTodo,
-    sincronizeTodo,
-  } = useTodos();
+    deleteTodo,
+    setSearchValue,
+    completeTodo,
+    sincronizeTodos
+  } = stateUpdaters;
+
+
    return (
       <>
       <TodoHeader loading={loading}>
@@ -82,7 +92,7 @@ import { ChangeAlert } from '../ChangeAlert/index';
       />
 
       <ChangeAlert
-        sincronize={sincronizeTodo}/>
+        sincronize={sincronizeTodos}/>
      </>
    );
  }
