@@ -1,9 +1,9 @@
 import React from 'react';
 import './TodoForm.css';
 
-function TodoForm({addTodo,
-  setOpenModal}) {
+function TodoForm({addTodo, setOpenModal}) {
   const [newTodoValue, setNewTodoValue] = React.useState('');
+  
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
   };

@@ -11,7 +11,6 @@ import { Modal } from '../Modal';
 import { TodoError } from '../TodoError/index';
 import { TodoLoading } from '../TodoLoading/index';
 import { EmptyTodos } from '../EmptyTodos/index';
-import { EmptySearchResaults } from '../EmptySearchResaults/index';
 import { ChangeAlert } from '../ChangeAlert/index';
 
  function App() {
